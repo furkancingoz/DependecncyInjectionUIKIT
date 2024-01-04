@@ -11,9 +11,14 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    view.backgroundColor = .systemBlue
+    let button = UIButton(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
+    button.setTitle("Open other VC", for: .normal)
   }
 
 
 }
 
+#Preview{
+  ViewController()
+}
