@@ -13,6 +13,11 @@
 		650E3E192B4725C300DD6E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650E3E172B4725C300DD6E2C /* Main.storyboard */; };
 		650E3E1B2B4725C500DD6E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650E3E1A2B4725C500DD6E2C /* Assets.xcassets */; };
 		650E3E1E2B4725C500DD6E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650E3E1C2B4725C500DD6E2C /* LaunchScreen.storyboard */; };
+		65E821CE2B4730BA00480188 /* BackgroundProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E821CD2B4730BA00480188 /* BackgroundProviderProtocol.swift */; };
+		65E821D02B47311F00480188 /* BackgroundProvidingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E821CF2B47311F00480188 /* BackgroundProvidingClass.swift */; };
+		65E821D22B4731D400480188 /* AnotherVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E821D12B4731D400480188 /* AnotherVCViewController.swift */; };
+		65E821D52B4733E100480188 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 65E821D42B4733E100480188 /* Swinject */; };
+		65E821D72B4733E100480188 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 65E821D62B4733E100480188 /* Swinject-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		650E3E1A2B4725C500DD6E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		650E3E1D2B4725C500DD6E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		650E3E1F2B4725C500DD6E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E821CD2B4730BA00480188 /* BackgroundProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundProviderProtocol.swift; sourceTree = "<group>"; };
+		65E821CF2B47311F00480188 /* BackgroundProvidingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundProvidingClass.swift; sourceTree = "<group>"; };
+		65E821D12B4731D400480188 /* AnotherVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherVCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E821D52B4733E100480188 /* Swinject in Frameworks */,
+				65E821D72B4733E100480188 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,9 @@
 				650E3E112B4725C300DD6E2C /* AppDelegate.swift */,
 				650E3E132B4725C300DD6E2C /* SceneDelegate.swift */,
 				650E3E152B4725C300DD6E2C /* ViewController.swift */,
+				65E821CD2B4730BA00480188 /* BackgroundProviderProtocol.swift */,
+				65E821CF2B47311F00480188 /* BackgroundProvidingClass.swift */,
+				65E821D12B4731D400480188 /* AnotherVCViewController.swift */,
 				650E3E172B4725C300DD6E2C /* Main.storyboard */,
 				650E3E1A2B4725C500DD6E2C /* Assets.xcassets */,
 				650E3E1C2B4725C500DD6E2C /* LaunchScreen.storyboard */,
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = DependecncyInjectionUIKIT;
+			packageProductDependencies = (
+				65E821D42B4733E100480188 /* Swinject */,
+				65E821D62B4733E100480188 /* Swinject-Dynamic */,
+			);
 			productName = DependecncyInjectionUIKIT;
 			productReference = 650E3E0E2B4725C300DD6E2C /* DependecncyInjectionUIKIT.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 650E3E052B4725C300DD6E2C;
+			packageReferences = (
+				65E821D32B4733E100480188 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 650E3E0F2B4725C300DD6E2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E821CE2B4730BA00480188 /* BackgroundProviderProtocol.swift in Sources */,
 				650E3E162B4725C300DD6E2C /* ViewController.swift in Sources */,
 				650E3E122B4725C300DD6E2C /* AppDelegate.swift in Sources */,
+				65E821D22B4731D400480188 /* AnotherVCViewController.swift in Sources */,
+				65E821D02B47311F00480188 /* BackgroundProvidingClass.swift in Sources */,
 				650E3E142B4725C300DD6E2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +386,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65E821D32B4733E100480188 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65E821D42B4733E100480188 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65E821D32B4733E100480188 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		65E821D62B4733E100480188 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65E821D32B4733E100480188 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 650E3E062B4725C300DD6E2C /* Project object */;
 }
